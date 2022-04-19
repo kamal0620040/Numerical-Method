@@ -24,9 +24,9 @@ mytable = PrettyTable(["Iteration","x","y","z","u",])
 condition=True
 while condition:
     x1 =round( fx(x0,y0,z0,u0), 4)
-    y1=round( fy(x1,y0,z0,u0), 4)
-    z1=round( fz(x1,y1,z0,u0), 4)
-    u1=round( fu(x1,y1,z1,u0), 4)
+    y1=round( fy(x0,y0,z0,u0), 4)
+    z1=round( fz(x0,y0,z0,u0), 4)
+    u1=round( fu(x0,y0,z0,u0), 4)
     # x = round(x,4)
     mytable.add_row([i,x0,y0,z0,u0])
 
@@ -38,8 +38,7 @@ while condition:
     z0=z1
     u0=u1
 mytable.add_row([i,x0,y0,z0,u0])
-print('Solution using Gauss-Seidel Method:-')
-
+print('Solution using Jacobi Method:-')
 print(mytable)
 print("Hence, the solution of given problem is\nx= "+ str(x1) + ', y= '+ str(y1) + ', z= '+ str(z1) + ', u= '+ str(u1))
 # print("The root of the function is: ",x)
