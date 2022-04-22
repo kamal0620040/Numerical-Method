@@ -32,7 +32,11 @@ while condition:
 
 
     i+=1
+    print(x0)
+    print(x1)
     condition=abs(x1-x0)>=epsilon or abs(y1-y0)>=epsilon or abs(z1-z0)>=epsilon or abs(u1-u0)>=epsilon
+    # condition=abs(x1-x0)==0 or abs(y1-y0)==0 or abs(z1-z0)==0 or abs(u1-u0)==0
+
     x0=x1
     y0=y1
     z0=z1
