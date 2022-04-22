@@ -1,5 +1,5 @@
 
-# Iteration False Position Method(Page-11 , Root finding)
+# Iteration Secant Method(Page-15 , Root finding)
 import math
 from prettytable import PrettyTable
 
@@ -17,22 +17,20 @@ i=1
 a=1
 b=2
 x=0
-mytable = PrettyTable(["Iteration","a(-)","b(+)","x","f(x)"])
+mytable = PrettyTable(["Iteration","a","b","x",])
 condition=True
 while condition:
     temp=x
     x= fx(a,b)
-    func=f(x)
-    mytable.add_row([i,a,b,x,func])
-    if func<0:
-        a=x
-    else:
-        b=x
+    mytable.add_row([i,a,b,x])
+    a=b
+    b=x
+
     i+=1
     condition=abs(temp-x)>epsilon  
 
 print(mytable)
-print('The root of the function using False Position method is: x= ' + str(x))
+print('The root of the function using Secant method is: x= ' + str(x))
 
 
 
