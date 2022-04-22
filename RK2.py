@@ -1,4 +1,4 @@
-
+# RK2 page 12 (Differential-Equation)
 def f(x,y):
     return round( (y **2 - x**2) /(y**2 + x**2), 4)
 def fk1(x,y,h ):
