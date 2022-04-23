@@ -1,7 +1,3 @@
-from multiprocessing import Condition
-import numpy as np
-import math
-import matplotlib.pyplot as plt
 from prettytable import PrettyTable
 
 def fx(x,y,z,u):
@@ -32,8 +28,6 @@ while condition:
 
 
     i+=1
-    print(x0)
-    print(x1)
     condition=abs(x1-x0)>=epsilon or abs(y1-y0)>=epsilon or abs(z1-z0)>=epsilon or abs(u1-u0)>=epsilon
     # condition=abs(x1-x0)==0 or abs(y1-y0)==0 or abs(z1-z0)==0 or abs(u1-u0)==0
 
